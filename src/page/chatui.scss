@@ -1,0 +1,59 @@
+.ChatUI {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 4rem;
+
+    .reset-api {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 10px;
+    }
+
+    .AI-box {
+        margin-bottom: 5rem;
+
+        .MuiListItemText-primary {
+            font-weight: 700;
+        }
+
+        .MuiCircularProgress-root {
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        .y-list {
+            .MuiAvatar-root {
+                background-color: rgb(255, 190, 3);
+                font-size: 14px;
+            }
+
+            .MuiListItemText-secondary {
+                color: rgba(0, 0, 0);
+            }
+        }
+
+        .MuiListItemAvatar-root {
+            min-width: 30px;
+        }
+
+        .MuiAvatar-root {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .from-contain {
+        position: fixed;
+        bottom: 0;
+        height: 3rem;
+        background: #ffffff;
+        left: 10vw;
+        padding-bottom: 2rem;
+
+        .MuiFormControl-root {
+            margin: 0;
+        }
+    }
+}
