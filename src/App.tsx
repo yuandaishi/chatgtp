@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import ChatUI from './page/chatUI';
+import ChatUI from './page/chatUI.tsx';
 import './App.css';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
   }
   if (showChat) {
     return (
-      <ChatUI resetApi={changeChatCon} />
+      <ChatUI resetApi={changeChatCon} Div={<div>测试功能</div>} />
     )
   }
   return (

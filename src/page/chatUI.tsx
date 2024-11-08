@@ -15,7 +15,7 @@ import Box from '@mui/material/Box';
 import './chatui.scss';
 import chatgtp from './../images/chatgpt.png';
 
-function ChatUI({ resetApi }: { resetApi: Function }) {
+function ChatUI({ resetApi, Div }: { resetApi: Function, Div: any }) {
     const inputRef = useRef<HTMLInputElement>(null);
     const [questionArr, setQuestionArr] = useState<any[]>([]);
     const [answerArr, setAnswerArr] = useState<any[]>([]);
@@ -60,6 +60,7 @@ function ChatUI({ resetApi }: { resetApi: Function }) {
                 "messages": questionArr.map(item => ({ role: "user", content: item })),
                 // "stream": true,
                 "transforms": ["middle-out"],
+                // 'number': 5464654564n,
                 "max_tokens": 0,
             })
         })
@@ -73,6 +74,7 @@ function ChatUI({ resetApi }: { resetApi: Function }) {
     }
     return (
         <div className="ChatUI">
+            {Div}
             <div className='AI-box'>
                 {
                     questionArr.map((item, key) => {
